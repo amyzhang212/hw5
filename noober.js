@@ -68,6 +68,68 @@ function renderRides(ridesArray) {
 }
 
 window.addEventListener('DOMContentLoaded', function() {
-  // YOUR CODE
-})
+// new codes 
 
+// define API to pull from
+
+let url = 'https://kiei451.com/api/rides.json'
+
+// all rides 
+
+let AllRides = document.querySelector("#all-filter")
+AllRides.addEventListener("click",async function(event) {
+  console.log (`All Rides was clicked `)
+
+let response = await fetch(url)
+let jsonForRides = await response.json ()
+document.querySelector('.rides').innerHTML =''
+renderRides(jsonForRides) 
+newArray = [] 
+
+// noober pool
+let AllRides = document.querySelector("#noober-pool-filter")
+AllRides.addEventListener("click",async function(event)) {
+  console.log (`Noober Pool was clicked `)
+
+let response = await fetch(url)
+let jsonForRides = await response.json ()
+document.querySelector('.rides').innerHTML =''
+renderRides(jsonForRides) 
+newArray = [] 
+
+// noober purple 
+let AllRides = document.querySelector("#noober-purple-filterr")
+AllRides.addEventListener("click",async function(event)) {
+  console.log (`Noober Purple was clicked `)
+
+let response = await fetch(url)
+let jsonForRides = await response.json ()
+document.querySelector('.rides').innerHTML =''
+renderRides(jsonForRides) 
+newArray = [] 
+
+// noober xl
+let AllRides = document.querySelector("#noober-xl-filterr")
+AllRides.addEventListener("click",async function(event)) {
+  console.log (`Noober XL was clicked `)
+
+let response = await fetch(url)
+let jsonForRides = await response.json ()
+document.querySelector('.rides').innerHTML =''
+renderRides(jsonForRides) 
+newArray = [] 
+
+// noober x
+
+let AllRides = document.querySelector("#noober-x-filterr")
+AllRides.addEventListener("click",async function(event)) {
+  console.log (`Noober X was clicked `)
+
+let response = await fetch(url)
+let jsonForRides = await response.json ()
+document.querySelector('.rides').innerHTML =''
+renderRides(jsonForRides) 
+newArray = [] 
+} 
+
+}) 
